@@ -1,4 +1,4 @@
-import { controller } from "../../layers";
+import { controllerLayer } from "../../layers";
 import { single } from "../../shared/utils/single";
 
 export class UserController {
@@ -8,4 +8,4 @@ export class UserController {
 }
 
 const userController = single(new UserController());
-controller.add("user", userController);
+controllerLayer.add("user", userController);

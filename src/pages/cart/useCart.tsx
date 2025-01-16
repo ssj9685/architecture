@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { bridge } from "../../layers";
+import { bridgeLayer } from "../../layers";
 
-const cartBridge = bridge.get("cart");
+const cartBridge = bridgeLayer.get("cart");
 
 export function useCart() {
   const [data, setData] = useState<string>();

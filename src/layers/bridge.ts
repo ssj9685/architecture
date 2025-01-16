@@ -8,4 +8,6 @@ interface Bridge {
   user: UserBridge;
 }
 
-export const bridge = single(new Layer<Bridge>(), "bridge");
+class BridgeLayer extends Layer<Bridge> {}
+
+export const bridgeLayer = single(new BridgeLayer());

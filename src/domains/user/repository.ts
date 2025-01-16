@@ -1,7 +1,7 @@
-import { repository } from "../../layers";
+import { repositoryLayer } from "../../layers";
 import { single } from "../../shared/utils/single";
 
 export class UserRepository {}
 
 const userRepository = single(new UserRepository());
-repository.add("user", userRepository);
+repositoryLayer.add("user", userRepository);

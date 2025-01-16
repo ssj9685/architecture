@@ -1,4 +1,4 @@
-import { controller } from "../../layers/controller";
+import { controllerLayer } from "../../layers/controller";
 import { service } from "../../layers/service";
 import { single } from "../../shared/utils/single";
 
@@ -13,4 +13,4 @@ export class CartController {
 }
 
 const cartController = single(new CartController());
-controller.add("cart", cartController);
+controllerLayer.add("cart", cartController);

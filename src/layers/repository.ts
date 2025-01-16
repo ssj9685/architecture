@@ -8,4 +8,5 @@ interface Repository {
   user: UserRepository;
 }
 
-export const repository = single(new Layer<Repository>(), "repository");
+class RepositoryLayer extends Layer<Repository> {}
+export const repositoryLayer = single(new RepositoryLayer());

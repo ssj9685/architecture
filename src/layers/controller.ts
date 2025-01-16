@@ -8,4 +8,6 @@ interface Controller {
   user: UserController;
 }
 
-export const controller = single(new Layer<Controller>(), "controller");
+class ControllerLayer extends Layer<Controller> {}
+
+export const controllerLayer = single(new ControllerLayer());

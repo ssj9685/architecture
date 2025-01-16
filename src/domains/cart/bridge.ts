@@ -1,9 +1,9 @@
-import { bridge } from "../../layers/bridge";
-import { controller } from "../../layers/controller";
+import { bridgeLayer } from "../../layers/bridge";
+import { controllerLayer } from "../../layers/controller";
 import { single } from "../../shared/utils/single";
 
 export class CartBridge {
-  private cartController = controller.get("cart");
+  private cartController = controllerLayer.get("cart");
 
   getAllAndLog(callback: (data: string) => void) {
     const data = this.cartController.getAllAndLog();
@@ -14,4 +14,4 @@ export class CartBridge {
 }
 
 const cartBridge = single(new CartBridge());
-bridge.add("cart", cartBridge);
+bridgeLayer.add("cart", cartBridge);

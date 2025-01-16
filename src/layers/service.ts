@@ -8,5 +8,6 @@ interface Service {
   user: UserService;
 }
 
-export const service = single(new Layer<Service>(), "service");
-``;
+class ServiceLayer extends Layer<Service> {}
+
+export const service = single(new ServiceLayer());

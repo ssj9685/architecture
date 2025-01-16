@@ -1,9 +1,9 @@
-import { repository } from "../../layers/repository";
+import { repositoryLayer } from "../../layers/repository";
 import { service } from "../../layers/service";
 import { single } from "../../shared/utils/single";
 
 export class CartService {
-  private cartRepository = repository.get("cart");
+  private cartRepository = repositoryLayer.get("cart");
 
   getAll() {
     const data = this.cartRepository.getAll() ?? "";

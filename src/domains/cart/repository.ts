@@ -1,4 +1,4 @@
-import { repository } from "../../layers/repository";
+import { repositoryLayer } from "../../layers/repository";
 import { localStorageManager } from "../../shared/utils/localStorage";
 import { single } from "../../shared/utils/single";
 
@@ -9,4 +9,4 @@ export class CartRespotiory {
 }
 
 const cartRepository = single(new CartRespotiory());
-repository.add("cart", cartRepository);
+repositoryLayer.add("cart", cartRepository);
